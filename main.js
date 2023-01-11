@@ -19,18 +19,16 @@ const user = {   // #123
 // 2. {}
 const user2 = user //#123
 user2.name = "Alex"
-console.log(user)
+
 
 
 const copyUser = {...user}
 // copyUser.name = user.name
 // copyUser.age = user.age
 
-console.log(user === user2) // true
-console.log(user === copyUser) // false
 
 
-console.log(copyUser)
+
 
 const arr = [1,2,3,4,5]
 const copyArr = [...arr]
@@ -61,13 +59,9 @@ const students = [
 
 
 const copyStudents = [...students]  // shallow
-console.log(students === copyStudents) // false
-console.log(students[0] === copyStudents[0]) //true
 
 const deepCopy = [{...students[0]}, {...students[1]}]
 
-console.log(students === deepCopy) // false
-console.log(students[0] === deepCopy[0]) //true
 
 
 
@@ -89,5 +83,5 @@ const newSt = students.map(student => student.name === "Bob"
         )}
     : student)
 
-console.log(newSt)
+
 
