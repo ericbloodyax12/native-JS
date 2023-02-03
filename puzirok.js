@@ -39,13 +39,6 @@ const students = [
     },
 ];
 
-
-
-
-
-
-
-
 //bubble sort
 const Arr = {id:[33, 9, 22, 2, 14.221,14.2222, -5,]}  // j = 1
 console.log(Arr.id)
@@ -59,8 +52,8 @@ function SortTop ({id:[]}) {
         }
     }
 }
-new SortTop(Arr);
 
+new SortTop(Arr);
 
 
 
@@ -75,9 +68,6 @@ new SortTop(Arr);
         }
     }
     if (isSorted) break*/
-
-
-
 
 
 
