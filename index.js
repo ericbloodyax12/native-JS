@@ -104,6 +104,7 @@ console.log(nums);
  }
 
 const Arr = [33, 9, 22, 2, 14.221,14.2222, -5,]  // j = 1
+// bubble
 function sortTop () {
     for (let j = 0; j < this.length - 1; j++) {
 
