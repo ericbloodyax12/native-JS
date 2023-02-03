@@ -1,5 +1,3 @@
-
-
 const students = [
     {
         name: "Bob",
@@ -40,20 +38,19 @@ const students = [
 ];
 
 //bubble sort
-const Arr = {id:[33, 9, 22, 2, 14.221,14.2222, -5,]}  // j = 1
-console.log(Arr.id)
-function SortTop ({id:[]}) {
-    for (let j = 0; j < this.id.length - 1; j++) {
+const Arr = [33, 9, 22, 2, 14.221,14.2222, -5,]  // j = 1
+function sortTop (array) {
+    for (let j = 0; j < array.length - 1; j++) {
 
-        for (let i = 0; i < this.id.length - 1 - j; i++) {
-            if (this.id[i] > this.id[i + 1]) {
-                [this.id[i + 1], this.id[i]] = [this.id[i], this.id[i + 1]]
+        for (let i = 0; i < array.length - 1 - j; i++) {
+            if (array[i] > array[i + 1]) {
+                [array[i + 1], array[i]] = [array[i], array[i + 1]]
             }
         }
-    }
+    } return array
 }
 
-new SortTop(Arr);
+console.log(sortTop(Arr));
 
 
 
