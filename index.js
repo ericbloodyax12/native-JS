@@ -102,3 +102,17 @@ console.log(nums);
  function getlenght() {
      return this.lenght
  }
+
+const Arr = [33, 9, 22, 2, 14.221,14.2222, -5,]  // j = 1
+function sortTop () {
+    for (let j = 0; j < this.length - 1; j++) {
+
+        for (let i = 0; i < this.length - 1 - j; i++) {
+            if (this[i] > this[i + 1]) {
+                [this[i + 1], this[i]] = [this[i], this[i + 1]]
+            }
+        }
+    } return this
+}
+Array.prototype.mysort = sortTop;
+console.log(Arr.mysort())
