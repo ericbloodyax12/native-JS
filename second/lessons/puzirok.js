@@ -1,22 +1,22 @@
 
 //1. сортирует строки "из коробки", т.е. без доп. параметров
 const str1 = ["Bob", "Alex", "John"]
-console.log(str1.sort())
+/*console.log(str1.sort())*/
 
 //2. сортирует строки типа по "алфавиту" (unicode)
 const str2 = ["Bob", "Alex", "John", "john", "123", "игорь", "Юрий", "ЮРИЙ"]
-console.log(str2.sort())
+/*console.log(str2.sort())*/
 
 //3. работает мутабельно (сортирует массив на месте)
-console.log(str2)
+/*console.log(str2)*/
 
 //4. возвращает ссылку на исходный массив
-console.log(str2 === str2.sort())
+/*console.log(str2 === str2.sort())*/
 
 //5. Для остальных случаев необходимо передать функцию сравнения (callback)
 
 const numbers = [1000, "+20", -500, 77, 9]
-console.log(numbers.sort())
+/*console.log(numbers.sort())*/
 const compareFn = (a, b) => {//по возрастанию
     if(a > b){   // надо переставить, >0!!!
         return 5
@@ -25,10 +25,10 @@ const compareFn = (a, b) => {//по возрастанию
     }
 }
 //6. Функция сравнения должна возвращать число большее или меньшее 0
-console.log(numbers.sort((a, b) => a - b))
+/*console.log(numbers.sort((a, b) => a - b))*/
 
 //7.Вместе с sort часто используется revers
-console.log(numbers.reverse())
+/*console.log(numbers.reverse())*/
 
 const students = [
     {
@@ -78,12 +78,12 @@ const compareObjByName = (a, b) => {
         return -1
     }
 }
-console.log(students.sort(compareObjByName))
+/*console.log(students.sort(compareObjByName))*/
 //б. РегистроНЕзависимая
-console.log(students.sort((a, b)=> a.name.localeCompare(b.name)))
+/*console.log(students.sort((a, b)=> a.name.localeCompare(b.name)))*/
 
 //8. Сортировка массива объектов по числовым значениям
-console.log(students.sort((a,b) => a.scores - b.scores))
+/*console.log(students.sort((a,b) => a.scores - b.scores))*/
 
 
 //bubble sort
@@ -104,7 +104,7 @@ for (let j = 0; j < numbersJS.length - 1; j++) {
 
 
 
-console.log(numbersJS)
+/*console.log(numbersJS)*/
 
 //O(n^2) => O((n-1)^2)=> O((n-1)*((n-1)/2))
 
@@ -112,4 +112,11 @@ console.log(numbersJS)
 // a = a + b  => a = 7
 // b = a - b  => b = 3
 // a = a - b  => a = 4
+
+// урок4 ассоц массив method reduce
+
+const num = [1,2,3,4]
+console.log(num.reduce((acc,el) => acc+el),0) //если второй параметр не нуль, то по умолч acc=arr[0]
+console.log(students.reduce((acc,el)=> acc.scores >el.scores ? acc : el ))
+
 
