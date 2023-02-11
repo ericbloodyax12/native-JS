@@ -1,6 +1,6 @@
 
 
-let students = [
+/*let students = [
     {
         name: "Bob",
         age: 22,
@@ -91,7 +91,7 @@ const itShift = (array) => {
     return removedItem
 }
 
-/*const new Array = (1,2,3,4)*/
+/!*const new Array = (1,2,3,4)*!/
 
 
 console.log(getNewArray(students, getName));
@@ -116,4 +116,7 @@ function sortTop () {
     } return this
 }
 Array.prototype.mysort = sortTop;
-console.log(Arr.mysort())
+console.log(Arr.mysort())*/
+let small = document.getElementById("small");
+small.addEventListener('click',(e)=> console.log("+"))
+
